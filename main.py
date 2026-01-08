@@ -80,4 +80,10 @@ def make_some(message: telebot.types.ChatJoinRequest):
 
 bot.infinity_polling(allowed_updates=telebot.util.update_types)
 
+@bot.message_handler(commands=['random_mem'])
+def send_mem(message):
+    images = os.listdir(r'C:\Users\User\Desktop\python про\mem_bot\images')
+    with open(fr'C:\Users\User\Desktop\python про\mem_bot\images\{random.choice(images)}', 'rb') as f:  
+        bot.send_photo(message.chat.id, f)  
+		
 bot.polling()
