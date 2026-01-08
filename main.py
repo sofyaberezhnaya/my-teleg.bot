@@ -3,7 +3,7 @@ from bot_logic import gen_pass
 from telebot.types import ReactionTypeEmoji
 from telebot import types
 
-bot = telebot.TeleBot("8433083621:AAGjpwTHNlZALkD_E2bE_-mRbmezrb-C5sE")
+bot = telebot.TeleBot("TOKEN")
   
 # Обработчик команды '/start' и '/hello'
 @bot.message_handler(commands=['start', 'hello'])
